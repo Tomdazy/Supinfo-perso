@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Click on me !</title>
+  </head>
+  <body>
+    <button id="1">Click me!</button>
+    <button id="2">Click me!</button>
+    <button id="3">Click me!</button>
+    <button id="4">Click me!</button>
+    <button id="5">Click me!</button>
+
+    <p>Time: <span>5</span> seconds</p>
+
+    <script>
+      var span = document.querySelector("span");
+      var alreadyLoose = 0;
+      setInterval(function() {
+        var seconds = parseInt(span.textContent);
+        if (seconds <= 0) seconds = 1;
+        span.textContent = --seconds;
+
+        if(seconds == 0 && alreadyLoose == 0) {
+          alert("You loose");
+          alreadyLoose = 1;
+          return "";
+        }
+      }, 1000);
+    </script>
+
+  </body>
+</html>
