@@ -20,6 +20,7 @@
         var seconds = parseInt(span.textContent);
         if (seconds <= 0) seconds = 1;
         span.textContent = --seconds;
+        
 
         if(seconds == 0 && alreadyLoose == 0) {
           alert("You loose");
